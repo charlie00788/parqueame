@@ -17,6 +17,8 @@ class ParkingController extends Controller
                         ->select('parkings.id', 'owners.name', 'parkings.type', 'latitude', 'longitude', 'location')
                         ->get();
 
-        return $disponibles;
+        $dispo = ["disponibles" => $disponibles];
+
+        return $dispo;
     }
 }
