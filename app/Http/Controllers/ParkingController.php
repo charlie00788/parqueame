@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Entities\Parking;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -25,6 +26,13 @@ class ParkingController extends Controller
 
     public function getUpdate($id)
     {
-        dd($id);
+        $parametros = explode(',', $id);
+
+        Parking::where('id', 1)
+                ->update(['state' => $parametros[0]]);
+        Parking::where('id', 2)
+            ->update(['state' => $parametros[1]]);
+        Parking::where('id', 3)
+            ->update(['state' => $parametros[2]]);
     }
 }
