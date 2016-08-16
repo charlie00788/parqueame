@@ -51,7 +51,10 @@ Route::get('disponibles', [
     'as'    => 'getAvailable'
 ]);
 
-
+Route::get('actualizar/{id}', [
+    'uses'  => 'ParkingController@getUpdate',
+    'as'    => 'getUpdate'
+]);
 
 
 // para ususarios autenticados

@@ -21,4 +21,9 @@ class ParkingController extends Controller
 
         return $dispo;
     }
+
+    public function getUpdate($id)
+    {
+        dd($id);
+    }
 }

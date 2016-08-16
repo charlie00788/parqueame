@@ -49,14 +49,38 @@ class UserTableSeeder extends Seeder
             'name'      => 'Parqueo público',
         ]);
 
-        for ($i=1; $i<=30; $i++){
+        for ($i=1; $i<=2; $i++){
             factory(\App\Entities\Parking::class)->create([
                 'owner_id'  => $owner_id,
                 'type'      => 'public',
             ]);
         }
 
-        for($i=1; $i<=20; $i++){
+        //para los parqueos reales
+        factory(\App\Entities\Parking::class)->create([
+            'owner_id'  => $owner_id,
+            'type'      => 'public',
+            'latitude'  =>'-16.53697',
+            'longitude' => '-68.08717'
+        ]);
+
+        factory(\App\Entities\Parking::class)->create([
+            'owner_id'  => $owner_id,
+            'type'      => 'public',
+            'latitude'  => '-16.53613',
+            'longitude' => '-68.08687'
+        ]);
+
+        factory(\App\Entities\Parking::class)->create([
+            'owner_id'  => $owner_id,
+            'type'      => 'public',
+            'latitude'  => '-16.53127',
+            'longitude' => '-68.08676'
+        ]);
+
+
+        //para los privados
+        for($i=1; $i<=2; $i++){
             factory(\App\Entities\User::class)->create([
                 'role'      => 'owner',
             ]);
@@ -70,5 +94,12 @@ class UserTableSeeder extends Seeder
                 'type'      => 'private',
             ]);
         }
+
+        factory(\App\Entities\Parking::class)->create([
+            'owner_id'  => $owner_id,
+            'type'      => 'private',
+            'latitude'  => '-16.53265',
+            'longitude' => '-68.08679'
+        ]);
     }
 }
