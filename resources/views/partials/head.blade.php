@@ -6,12 +6,12 @@
         <ul class="nav navbar-top-links navbar-right">
             <li>
                 <span class="m-r-sm text-muted welcome-message">
-                    Departamento VI "Enseñanza e Institutos Navales"
+                    Aplicacion Web "Parquéame"
                 </span>
             </li>
 
             <li>
-                <a href="{{ route('logout') }}">
+                <a href="#">
                     <i class="fa fa-sign-out"></i> Cerrar sesión
                 </a>
             </li>

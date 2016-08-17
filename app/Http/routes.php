@@ -56,6 +56,16 @@ Route::get('actualizar/{id}', [
     'as'    => 'getUpdate'
 ]);
 
+Route::get('parqueo_privado/{id}', [
+    'uses'  => 'ParkingController@getParqueo',
+    'as'    => 'getParqueo'
+]);
+
+Route::get('actualizar_privado/{id}/{opcion}', [
+    'uses'  => 'ParkingController@getUpdatePrivate',
+    'as'    => 'getUpdatePrivate'
+]);
+
 
 // para ususarios autenticados
 

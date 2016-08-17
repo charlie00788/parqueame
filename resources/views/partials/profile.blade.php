@@ -1,31 +1,33 @@
 <div class="dropdown profile-element">
     <span>
-        @if($usuario->role == 'user')
+        {{--@if($usuario->role == 'user')--}}
 
         <img alt="image" class="img-circle mi_logo" src="{{ asset('imagenes/user.jpg') }}" />
 
-        @else
+        {{--@else--}}
 
-        <img alt="image" class="img-circle mi_logo" src="{{ asset('imagenes/admin.jpg') }}" />
+        {{--<img alt="image" class="img-circle mi_logo" src="{{ asset('imagenes/admin.jpg') }}" />--}}
 
-        @endif
+        {{--@endif--}}
     </span>
 
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
         <span class="clear">
             <span class="block m-t-xs">
-                <strong class="font-bold">{{ $usuario->grade->grade }} {{ $usuario->especialty->especialty }} {{ $person->getNameComplete() }}</strong>
+                {{--<strong class="font-bold">{{ $usuario->grade->grade }} {{ $usuario->especialty->especialty }} {{ $person->getNameComplete() }}</strong>--}}
+                Megacenter
             </span>
 
             <span class="text-muted text-xs block">
-                {{ $usuario->rol }}<b class="caret"></b>
+                {{--{{ $usuario->rol }}<b class="caret"></b>--}}
+                Propietario
             </span>
         </span>
     </a>
 
-    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-        <li>
-            <a href="{{ route('logout') }}">Cerrar sesión</a>
-        </li>
-    </ul>
+    {{--<ul class="dropdown-menu animated fadeInRight m-t-xs">--}}
+        {{--<li>--}}
+            {{--<a href="{{ route('logout') }}">Cerrar sesión</a>--}}
+        {{--</li>--}}
+    {{--</ul>--}}
 </div>

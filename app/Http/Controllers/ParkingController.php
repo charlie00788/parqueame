@@ -35,4 +35,19 @@ class ParkingController extends Controller
         Parking::where('id', 3)
             ->update(['state' => $parametros[2]]);
     }
+
+    public function getParqueo($id)
+    {
+        $parqueo = Parking::findOrFail($id);
+        return view('home.parqueo', compact('parqueo'));
+    }
+
+    public function getUpdatePrivate($id, $opcion)
+    {
+        Parking::where('id', $id)
+            ->update(['state' => $opcion]);
+
+        $parqueo = Parking::findOrFail($id);
+        return view('home.parqueo', compact('parqueo'));
+    }
 }

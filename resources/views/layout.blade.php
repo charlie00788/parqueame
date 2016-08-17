@@ -14,7 +14,7 @@
 
     <meta http-equiv=”Pragma” CONTENT=”no-cache”> --}}
 
-    <title>Departamento VI "Enseñanza e Institutos Navales"</title>
+    <title>Parqueo</title>
 
     {!! Html::style('css/bootstrap.min.css') !!}
     {!! Html::style('font-awesome/css/font-awesome.css') !!}
@@ -41,13 +41,13 @@
                         @include('partials.profile')
 
                         <div class="logo-element">
-                            Dpto. VI
+                            Parqueo
                         </div>
                     </li>
 
                     {{-- aca vamos a incluir el menu de usuario --}}
 
-                    @include('partials.menu')
+                    {{--@include('partials.menu')--}}
 
                 </ul>
 
