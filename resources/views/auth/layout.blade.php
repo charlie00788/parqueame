@@ -23,15 +23,15 @@
 
     <div class="row">
         <div class="col-md-2">
-            <img src="{{ asset('imagenes/armabol.png') }}" alt="" width="100%">
+            {{--<img src="{{ asset('imagenes/armabol.png') }}" alt="" width="100%">--}}
         </div>
         <div class="col-md-8">
             <h2 class="font-bold" align="center">
-                Sistema de Certificaciones del Departamento VI "Enseñanzas, Institutos Navales y Doctrina"
+                Sistema de Búsquda de Parqueos "Parquéame"
             </h2>
         </div>
         <div class="col-md-2">
-            <img src="{{ asset('imagenes/dpto.png') }}" alt="" width="100%">
+            {{--<img src="{{ asset('imagenes/dpto.png') }}" alt="" width="100%">--}}
         </div>
     </div>
     <div class="row">
@@ -40,19 +40,17 @@
 
             <p align="justify">
 
-            Bienvenidos al Sistema de Certificaciones del Departamento VI "Enseñanza e Institutos Navales",
-            donde podrás acceder a las certificaciones y el llenado de las mismas.
-
+            Bienvenidos al Sistema de Búsquedas de Parqueos donde podrá encontrar un parqueo disponible
+                cerca de su actual localizacion.
         </p>
 
         <p align="justify">
-            El Departamento VI "Enseñanza e Institutos Navales" a desarrollado el Sistema de Certificaciones
-            donde se realizará el respectivo llenado y certificación de Cursos, Especializaciones
-            y otros.
+            El G.A.M.L.P. en busca del bienestar de la población brinda el servicio de busqeda de
+            parqueos para proporcionarle un espacio para su movilidad.
         </p>
 
         <p align="justify">
-            <small>Para poder ingresar al Sistema deberá registrarse en el Dpto. VI "Enseñanzas, Institutos Navales y Doctrina"
+            <small>Para poder ingresar al Sistema deberá registrarse en el G.A.M.L.P.
             donde se le asignará un usuario y contraseña, todo ingreso a la plataforma
                 estará registrado en el sistema.</small>
         </p>
@@ -69,7 +67,7 @@
     <hr/>
     <div class="row">
         <div class="col-md-8">
-            Desarrollado por TF. CGON. Charlie Seoane Sanchez
+            Desarrollado por Charlie Seoane Sanchez y Fabricio Torrico Barahona
         </div>
         <div class="col-md-4 text-right">
             <small>Copyright © 2016</small>

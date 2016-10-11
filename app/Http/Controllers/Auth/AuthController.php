@@ -117,7 +117,6 @@ class AuthController extends Controller
         return [
             'nickName' => $request->get('nickName'),
             'password' => $request->get('password'),
-            'active'   => true
         ];
     }
 

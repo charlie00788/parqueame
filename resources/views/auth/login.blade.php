@@ -6,7 +6,7 @@
     {!! Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form']) !!}
 
         <div class="form-group">
-            {!! Form::text('id', old('id'), ['class' => 'form-control', 'placeholder' => 'Usuario']) !!}
+            {!! Form::text('nickName', old('nickName'), ['class' => 'form-control', 'placeholder' => 'Usuario']) !!}
 
         </div>
         <div class="form-group">
@@ -14,13 +14,13 @@
         </div>
         {!! Form::submit('Iniciar sesión', ['class' => 'btn btn-primary block full-width m-b']) !!}
 
-        <a href="{{ url('password/email') }}">
-            <small>Olvidó su contraseña?</small>
-        </a>
+        {{--<a href="{{ url('password/email') }}">--}}
+            {{--<small>Olvidó su contraseña?</small>--}}
+        {{--</a>--}}
 
     {!! Form::close() !!}
     <p class="m-t">
-        <small>Departamento VI "Enseñanza, Institutos Navales y Doctrina" &copy; 2016</small>
+        <small>Gobierno Autonomo Munucipal de La Paz</small>
     </p>
 </div>
 

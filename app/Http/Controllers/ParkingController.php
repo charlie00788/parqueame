@@ -50,4 +50,10 @@ class ParkingController extends Controller
         $parqueo = Parking::findOrFail($id);
         return view('home.parqueo', compact('parqueo'));
     }
+
+    public function getgmlp()
+    {
+
+        return view('home.gmlp');
+    }
 }

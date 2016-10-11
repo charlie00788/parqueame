@@ -66,6 +66,11 @@ Route::get('actualizar_privado/{id}/{opcion}', [
     'as'    => 'getUpdatePrivate'
 ]);
 
+Route::get('gamlp', [
+    'uses'  => 'ParkingController@getgmlp',
+    'as'    => 'getgmlp'
+]);
+
 
 // para ususarios autenticados
 
