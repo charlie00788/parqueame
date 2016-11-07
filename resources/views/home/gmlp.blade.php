@@ -22,14 +22,14 @@
             </div>
             <div class="ibox-content">
                 <div class="form-horizontal">
-                    <div class="form-group">
-                        {!! Form::label('person_id', 'Nombre del Parqueo:', ['class' => 'col-lg-3 control-label']) !!}
-                        <div class="col-lg-9">
-                            <p class="form-control-static">
-                                {!! Form::text('person_id') !!}
-                            </p>
-                        </div>
-                    </div>
+                    {{--<div class="form-group">--}}
+                        {{--{!! Form::label('person_id', 'Nombre del Parqueo:', ['class' => 'col-lg-3 control-label']) !!}--}}
+                        {{--<div class="col-lg-9">--}}
+                            {{--<p class="form-control-static">--}}
+                                {{--{!! Form::text('person_id') !!}--}}
+                            {{--</p>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                     <div class="form-group">
                         {!! Form::label('city_id', 'Ubicación:', ['class' => 'col-lg-3 control-label']) !!}
                         <div class="col-lg-9">
