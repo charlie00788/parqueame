@@ -15,7 +15,7 @@ class ParkingController extends Controller
     {
         $disponibles = DB::table('parkings')
                         ->join('owners', 'parkings.owner_id', '=', 'owners.id')
-                        ->select('parkings.id', 'owners.name', 'parkings.type', 'latitude', 'longitude', 'location')
+                        ->select('parkings.id', 'owners.name', 'owners.type', 'latitude', 'longitude', 'location')
                         ->where('state', true)
                         ->get();
 
