@@ -120,7 +120,16 @@ return [
         'especialty_id' => 'Especialidad',
         'topic_id'  => 'Materia o Periodo',
         'topic'  => 'Materia o Periodo',
-        'password'  => 'Contraseña'
+        'password'  => 'Contraseña',
+
+        'role'  => 'Rol',
+        'name'  => 'Nombre',
+        'nickname'  => 'Usuario',
+        'type'  => 'Tipo',
+        'location'  => 'Ubicación',
+        'latitude'  => 'Latitud',
+        'longitude' => 'Longitud',
+        'state' => 'Estado'
     ],
 ];
 

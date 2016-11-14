@@ -53,7 +53,6 @@ class ParkingController extends Controller
 
     public function getgmlp()
     {
-
         return view('home.gmlp');
     }
 }

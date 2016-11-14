@@ -11,7 +11,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="{{ route('logout') }}">
                     <i class="fa fa-sign-out"></i> Cerrar sesión
                 </a>
             </li>

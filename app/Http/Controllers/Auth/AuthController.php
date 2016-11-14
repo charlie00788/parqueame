@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -11,7 +12,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
-    protected $username = 'nickName';
+    protected $username = 'nickname';
 
     /*
     |--------------------------------------------------------------------------
@@ -103,7 +104,7 @@ class AuthController extends Controller
      */
     public function loginUsername()
     {
-        return property_exists($this, 'username') ? $this->username : 'nickName';
+        return property_exists($this, 'username') ? $this->username : 'nickname';
     }
 
     /**
@@ -115,7 +116,7 @@ class AuthController extends Controller
     protected function getCredentials(Request $request)
     {
         return [
-            'nickName' => $request->get('nickName'),
+            'nickname' => $request->get('nickname'),
             'password' => $request->get('password'),
         ];
     }

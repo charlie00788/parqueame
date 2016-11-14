@@ -6,7 +6,7 @@
     {!! Form::open(['route' => 'login', 'method' => 'POST', 'role' => 'form']) !!}
 
         <div class="form-group">
-            {!! Form::text('nickName', old('nickName'), ['class' => 'form-control', 'placeholder' => 'Usuario']) !!}
+            {!! Form::text('nickname', old('nickname'), ['class' => 'form-control', 'placeholder' => 'Usuario']) !!}
 
         </div>
         <div class="form-group">

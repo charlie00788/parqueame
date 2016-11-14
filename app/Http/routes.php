@@ -81,4 +81,72 @@ Route::group(['middleware' => 'auth'], function(){
         'as'   => 'home'
     ]);
 
+    // para el admin
+
+    Route::get('usuarios', [
+        'uses'  => 'AdminController@getUsers',
+        'as'    => 'admin.getUsers'
+    ]);
+
+    Route::get('agregar-usuario', [
+        'uses'  => 'AdminController@getAddUser',
+        'as'    => 'admin.getAddUser'
+    ]);
+
+    Route::post('agregar-usuario', [
+        'uses'  => 'AdminController@postAddUser',
+        'as'    => 'admin.postAddUser'
+    ]);
+
+    Route::get('borrar-usuario/{user_id}', [
+        'uses'  => 'AdminController@getDeleteUser',
+        'as'    => 'admin.getDeleteUser'
+    ]);
+
+    // para los propietarios
+
+    Route::get('propietarios', [
+        'uses'  => 'OwnerController@getOwners',
+        'as'    => 'owner.getOwners'
+    ]);
+
+    Route::get('agregar-propietario', [
+        'uses'  => 'OwnerController@getAddOwner',
+        'as'    => 'owner.getAddOwner'
+    ]);
+
+    Route::post('agregar-propietario', [
+        'uses'  => 'OwnerController@postAddOwner',
+        'as'    => 'owner.postAddOwner'
+    ]);
+
+    Route::get('borrar-propietario/{owner_id}', [
+        'uses'  => 'OwnerController@getDeleteOwner',
+        'as'    => 'owner.getDeleteOwner'
+    ]);
+
+    Route::get('parqueos/{owner_id}', [
+        'uses'  => 'OwnerController@getParkings',
+        'as'    => 'owner.getParkings'
+    ]);
+
+    Route::get('agregar-parqueo/{owner_id}', [
+        'uses'  => 'OwnerController@getAddParking',
+        'as'    => 'owner.getAddParking'
+    ]);
+
+    Route::post('agregar-parqueo', [
+        'uses'  => 'OwnerController@postAddParking',
+        'as'    => 'owner.postAddParking'
+    ]);
+
+    Route::get('borrar-parqueo/{parking_id}/{owner_id}', [
+        'uses'  => 'OwnerController@getDeleteParking',
+        'as'    => 'owner.getDeleteParking'
+    ]);
+
+    Route::get('cambiar-estado/{parking_id}', [
+        'uses'  => 'OwnerController@getChangeState',
+        'as'    => 'owner.getChangeState'
+    ]);
 });

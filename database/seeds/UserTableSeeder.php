@@ -18,7 +18,7 @@ class UserTableSeeder extends Seeder
     public function createAdmin()
     {
         factory(\App\Entities\User::class)->create([
-            'nickName'  => 'alcaldia',
+            'nickname'  => 'alcaldia',
             'name'      => 'G.A.M.L.P.',
             'role'      => 'admin',
             'email'     => 'alcaldia@hotmail.com',
@@ -27,108 +27,63 @@ class UserTableSeeder extends Seeder
 
     public function createUser()
     {
-        $user_id = 3;
-        $owner_id = 1;
-
         factory(\App\Entities\User::class)->create([
-            'nickName'  => 'usuario',
-            'name'      => 'usuario',
-            'role'      => 'user',
-            'email'     => 'user@hotmail.com',
-        ]);
-
-        factory(\App\Entities\User::class)->create([
-            'nickName'  => 'subalcaldia1',
+            'nickname'  => 'subalcaldia1',
             'name'      => 'G.A.M.L.P.',
             'role'      => 'owner',
             'email'     => 'subalcaldia1@hotmail.com',
         ]);
 
-        factory(\App\Entities\Owner::class)->create([
-            'user_id'   => $user_id,
-            'name'      => 'Parqueo público',
-            'location'  => 'Av. Rafael Pabon #100'
+        factory(\App\Entities\User::class)->create([
+            'nickname'  => 'megacenter',
+            'name'      => 'Megacenter La Paz',
+            'role'      => 'owner',
+            'email'     => 'mega@hotmail.com',
         ]);
 
-        factory(\App\Entities\Parking::class)->create([
-            'owner_id'  => $owner_id,
+
+
+        factory(\App\Entities\Owner::class)->create([
+            'user_id'   => 2,
+            'name'      => 'Parqueo público',
             'type'      => 'public',
+        ]);
+
+        factory(\App\Entities\Owner::class)->create([
+            'user_id'   => 3,
+            'name'      => 'Megacenter La Paz',
+            'type'      => 'private',
+        ]);
+
+
+
+
+        factory(\App\Entities\Parking::class)->create([
+            'owner_id'  => 1,
+            'location'  => 'Av. Rafael Pabon #100 espacio #1',
             'latitude'  => '-16.53697',
             'longitude' => '-68.08717'
         ]);
 
-        factory(\App\Entities\Owner::class)->create([
-            'user_id'   => $user_id,
-            'name'      => 'Parqueo público',
-            'location'  => 'Av. Rafael Pabon #200'
-        ]);
-
         factory(\App\Entities\Parking::class)->create([
-            'owner_id'  => $owner_id,
-            'type'      => 'public',
+            'owner_id'  => 1,
+            'location'  => 'Av. Rafael Pabon #100 espacio #2',
             'latitude'  => '-16.53613',
             'longitude' => '-68.08687'
         ]);
 
-        factory(\App\Entities\Owner::class)->create([
-            'user_id'   => $user_id,
-            'name'      => 'Parqueo público',
-            'location'  => 'Av. Rafael Pabon #300'
-        ]);
-
         factory(\App\Entities\Parking::class)->create([
-            'owner_id'  => $owner_id,
-            'type'      => 'public',
+            'owner_id'  => 1,
+            'location'  => 'Av. Rafael Pabon #100 espacio #3',
             'latitude'  => '-16.53127',
             'longitude' => '-68.08676'
         ]);
 
-//        for ($i=1; $i<=2; $i++){
-//            factory(\App\Entities\Parking::class)->create([
-//                'owner_id'  => $owner_id,
-//                'type'      => 'public',
-//            ]);
-//        }
-
-
-
-
-
-
-
-
-        //para los privados
-//        for($i=1; $i<=2; $i++){
-//            factory(\App\Entities\User::class)->create([
-//                'role'      => 'owner',
-//            ]);
-//            $user_id++;
-//            factory(\App\Entities\Owner::class)->create([
-//                'user_id'   => $user_id,
-//            ]);
-//            $owner_id++;
-//            factory(\App\Entities\Parking::class)->create([
-//                'owner_id'  => $owner_id,
-//                'type'      => 'private',
-//            ]);
-//        }
-
-        factory(\App\Entities\User::class)->create([
-            'role'      => 'owner',
-        ]);
-        $user_id++;
-        factory(\App\Entities\Owner::class)->create([
-            'user_id'   => $user_id,
-            'name'      => 'Megacenter',
-            'location'  => 'Av. Rafael Pabon #20'
-        ]);
-        $owner_id++;
         factory(\App\Entities\Parking::class)->create([
-            'owner_id'  => $owner_id,
-            'type'      => 'private',
+            'owner_id'  => 2,
+            'location'  => 'Av. Rafael Pabon #400',
             'latitude'  => '-16.53265',
             'longitude' => '-68.08679',
         ]);
-
     }
 }

@@ -16,7 +16,7 @@ class CreateOwnersTable extends Migration
             $table->increments('id');
             $table->bigInteger('user_id');
             $table->string('name');
-            $table->string('location');
+            $table->enum('type', ['public', 'private']);
             $table->timestamps();
 
             $table->foreign('user_id')

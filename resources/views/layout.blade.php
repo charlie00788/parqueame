@@ -45,9 +45,9 @@
                         </div>
                     </li>
 
-                    {{-- aca vamos a incluir el menu de usuario --}}
+                     {{--aca vamos a incluir el menu de usuario--}}
 
-                    {{--@include('partials.menu')--}}
+                    @include('partials.menu')
 
                 </ul>
 

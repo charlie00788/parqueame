@@ -15,7 +15,7 @@ class CreateParkingsTable extends Migration
         Schema::create('parkings', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('owner_id');
-            $table->enum('type', ['public', 'private']);
+            $table->string('location');
             $table->float('latitude', 9, 6);
             $table->float('longitude', 9, 6);
             $table->boolean('state')->default(true);
