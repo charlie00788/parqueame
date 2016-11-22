@@ -58,4 +58,12 @@ class AdminController extends Controller
 
         return redirect(route('admin.getUsers'));
     }
+
+    public function getReport()
+    {
+        $usuario = auth()->user();
+        $users = User::all();
+
+        return view('admin.reporte', compact('usuario', 'users'));
+    }
 }

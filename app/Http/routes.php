@@ -83,6 +83,11 @@ Route::group(['middleware' => 'auth'], function(){
 
     // para el admin
 
+    Route::get('reporte', [
+        'uses'  => 'AdminController@getReport',
+        'as'    => 'admin.getReport'
+    ]);
+
     Route::get('usuarios', [
         'uses'  => 'AdminController@getUsers',
         'as'    => 'admin.getUsers'
