@@ -24,7 +24,8 @@ class HomeController extends Controller
 
     public function getPrueba($username, $password)
     {
-
-        return 'hola';
+        $palabra = $username . ' y ' . $password;
+        $respuesta = ["respuesta" => $palabra];
+        return $respuesta;
     }
 }
