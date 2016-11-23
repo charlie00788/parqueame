@@ -85,7 +85,8 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('reporte', [
         'uses'  => 'AdminController@getReport',
-        'as'    => 'admin.getReport'
+        'as'    => 'admin.getR
+        eport'
     ]);
 
     Route::get('usuarios', [
@@ -155,3 +156,9 @@ Route::group(['middleware' => 'auth'], function(){
         'as'    => 'owner.getChangeState'
     ]);
 });
+
+
+Route::get('user/{username}/pass/{password}', [
+    'uses'  => 'HomeController@getPrueba',
+    'as'    => 'prueba.prueba'
+]);

@@ -21,4 +21,11 @@ class HomeController extends Controller
         if ($usuario->role == 'admin') return view('home.admin', compact('usuario'));
         else return view('home.owner', compact('usuario'));
     }
+
+    public function getPrueba($username, $password)
+    {
+        $palabra = $username . ' y ' . $password;
+        $respuesta = ["respuesta" => $palabra];
+        return $respuesta;
+    }
 }
