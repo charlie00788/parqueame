@@ -30,7 +30,9 @@ class HomeController extends Controller
             'logueado' => true,
             'direccion' => 'mi mazo'
         ];
-        $resultado = ['respuesta' => $respuesta];
+
+        $res[] = $respuesta;
+        $resultado = ['respuesta' => $res];
         return $resultado;
     }
 }
