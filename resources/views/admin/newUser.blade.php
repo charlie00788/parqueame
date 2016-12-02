@@ -43,10 +43,10 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    {!! Form::label('email', 'Correo electrónico:', ['class' => 'col-lg-3 control-label']) !!}
+                                    {!! Form::label('email', 'Contraseña:', ['class' => 'col-lg-3 control-label']) !!}
                                     <div class="col-lg-9">
                                         <p class="form-control-static">
-                                            {!! Form::email('email', old('email')) !!}
+                                            {!! Form::password('email') !!}
                                         </p>
                                     </div>
                                 </div>
