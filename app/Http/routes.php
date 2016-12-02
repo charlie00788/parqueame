@@ -85,8 +85,7 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('reporte', [
         'uses'  => 'AdminController@getReport',
-        'as'    => 'admin.getR
-        eport'
+        'as'    => 'admin.getReport'
     ]);
 
     Route::get('usuarios', [
